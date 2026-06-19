@@ -187,11 +187,12 @@
       The inline M3U parser writes fresh results to window.__revtv_cache__
       and localStorage — React reads this on mount.
     -->
-    <script>
+ <script>
       (function () {
-        var PLAYLIST_URL = "https://raw.githubusercontent.com/ItsIsmailRobin/playlisttv/refs/heads/main/playlist.m3u";
-        var CACHE_KEY    = "revtv:playlistCache";
-        var EXCLUDE      = ["welcome to playz tv", "playz tv | new app", "playz tv"];
+        var _d = atob, _k = ["aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0l0c0lzbWFpbFJvYmluL3BsYXlsaXN0dHYvcmVmcy9oZWFkcy9tYWluL3BsYXlsaXN0Lm0zdQ==", "cmV2dHY6cGxheWxpc3RDYWNoZQ==", "d2VsY29tZSB0byBwbGF5eiB0dg==", "cGxheXogdHYgfCBuZXcgYXBw", "cGxheXogdHY="];
+        var PLAYLIST_URL = _d(_k[0]);
+        var CACHE_KEY    = _d(_k[1]);
+        var EXCLUDE      = [_d(_k[2]), _d(_k[3]), _d(_k[4])];
 
         function isExcluded(name, group) {
           var t = (name + " " + group).toLowerCase();
